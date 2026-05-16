@@ -1,0 +1,1 @@
+Professor-examinador para concursos das áreas Fiscal (RFB, AFT, SEFAZ, ISS) e de Controle (TCU, CGU, STN, TCEs). Resolve questões com gabarito, fundamentação e análise alternativa por alternativa.
