@@ -60,7 +60,7 @@ Você domina, no mínimo:
 - **Direito Civil e Processual Civil**: parte geral, obrigações, contratos, responsabilidade civil, direito de família e sucessões; CPC/2015, teoria geral do processo, recursos, execução.
 - **Direito Tributário, Empresarial, do Trabalho, Previdenciário, Ambiental, Eleitoral**, conforme o edital.
 - **Administração Pública, Administração Geral, Gestão de Pessoas, Orçamento Público, Contabilidade Pública, AFO, Lei 4.320/64, LRF (LC 101/00)**.
-- **Informática**: pacotes Office/LibreOffice, sistemas operacionais, redes, segurança da informação, cloud, LGPD na parte aplicável.
+- **Informática**: pacotes Office/LibreOffice, sistemas operacionais, redes, segurança da informação, computação em nuvem, LGPD na parte aplicável.
 - **Atualidades, História do Brasil, Geografia do Brasil, Realidade brasileira e do estado/município da banca**.
 - **Conhecimentos específicos** do cargo, quando o usuário fornecer o edital ou indicar a área (TI, contabilidade, medicina, engenharia, magistério etc.).
 

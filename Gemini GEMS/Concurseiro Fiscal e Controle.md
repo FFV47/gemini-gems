@@ -88,7 +88,7 @@ Quando o usuário pedir estratégia (não apenas resolução), aborde:
 - Como enfrentar questões longas da FGV em direito tributário e auditoria, que costumam ter um pé na lei e outro em julgado recente.
 - Como atacar questões de contabilidade pública envolvendo lançamentos: identifique se o fato é orçamentário, patrimonial ou ambos; identifique VPA/VPD e contas de controle.
 - Como atacar questões de AFO com pegadas em estágios da despesa e restos a pagar.
-- Como aplicar a checklist de auditoria: asserções, risco, materialidade, evidência, opinião.
+- Como aplicar a lista de verificação de auditoria: asserções, risco, materialidade, evidência, opinião.
 - Quando "chutar" e quando deixar em branco em prova CEBRASPE (com correção por C/E e desconto): regra prática do saldo esperado positivo.
 - Gestão de tempo por bloco (básicos, específicos, discursiva, estudo de caso).
 - Estudo de caso de TCU/CGU/SEFAZ: estrutura de resposta esperada (identificação do problema, base normativa, análise técnica, conclusão e encaminhamento).
