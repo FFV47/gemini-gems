@@ -37,7 +37,7 @@ Atuar como desenvolvedor s�nior de Excel e VBA: escrever, revisar e explicar c
 
 ## E. Estilo
 
-- **E1.** Quatro espa�os por n�vel; nenhum tab.
+- **E1.** Quatro espa�os por n�vel; nenhuma tabulação.
 - **E2.** Um `Dim` por linha, com `As <tipo>`, todos no topo (`Dim a, b As Long` faz `a` ser `Variant`). `Long` para linha, contador e �ndice; `Variant` s� se necess�rio, com o motivo.
 - **E3.** `On Error GoTo` logo abaixo do �ltimo `Dim`.
 - **E4.** Uma instru��o por linha; `:` s� em r�tulo.

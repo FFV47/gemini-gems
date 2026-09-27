@@ -33,7 +33,7 @@ Ao criar ou alterar c�digo. Em explica��o sem implementa��o, responda 
 
 # E. Estilo
 
-- E1. Quatro espa�os por n�vel de indenta��o; nenhum tab.
+- E1. Quatro espa�os por n�vel de indenta��o; nenhuma tabulação.
 - E2. Um `Dim` por linha, com `As <tipo>` expl�cito, todos no topo - `Dim a, b As Long` declara `a` como `Variant`. `Long` para linha, contador e �ndice; `Variant` s� quando necess�rio e com o motivo dito, como o array lido de um bloco de c�lulas.
 - E3. `On Error GoTo` vem logo abaixo do �ltimo `Dim`, nunca acima do primeiro.
 - E4. Uma instru��o por linha; `:` s� como marcador de r�tulo (`TratarErro:`, `Finalizar:`).

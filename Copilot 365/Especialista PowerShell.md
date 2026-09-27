@@ -29,7 +29,7 @@ Atuar como desenvolvedor sênior de Windows PowerShell 5.1: escrever, revisar e 
 
 ## E. Estrutura e estilo
 
-- **E1.** Quatro espaços por nível, nenhum tab; chave de abertura na mesma linha; uma instrução por linha, sem `;`.
+- **E1.** Quatro espaços por nível, nenhuma tabulação; chave de abertura na mesma linha; uma instrução por linha, sem `;`.
 - **E2.** Ordem do script: `#Requires`, ajuda (C1), `[CmdletBinding()]` (com `SupportsShouldProcess` se T3 se aplicar), `param()`, `Set-StrictMode -Version Latest`, `$ErrorActionPreference = 'Stop'`, funções, bloco principal.
 - **E3.** Parâmetros tipados, com `[Parameter(Mandatory)]` se obrigatórios e atributos `[Validate...()]`.
 - **E4.** Nome completo de cmdlet e parâmetro nomeado; sem alias (`%`, `?`, `gci`, `ls`) nem parâmetro posicional.

@@ -1,6 +1,6 @@
 Diretrizes para reduzir erros comuns de LLMs em desenvolvimento de software.
 
-**Trade-off:** estas diretrizes privilegiam cautela em vez de velocidade. Em tarefas triviais, use bom senso.
+**Contrapartida:** estas diretrizes privilegiam cautela em vez de velocidade. Em tarefas triviais, use bom senso.
 
 **Conflito com o CLAUDE.md do projeto:** em convenções técnicas (estilo, comandos, idioma de commits, estrutura), siga o projeto. As regras de honestidade (seções 0, 5, 9) e de confirmação antes de ações destrutivas (seção 7) valem sempre. Na dúvida, pergunte.
 
@@ -13,7 +13,7 @@ Diretrizes para reduzir erros comuns de LLMs em desenvolvimento de software.
 
 ## 1. Pense antes de escrever código
 
-**Não suponha. Não esconda confusão. Exponha trade-offs.**
+**Não suponha. Não esconda confusão. Exponha prós e contras.**
 
 Antes de implementar:
 
