@@ -1,0 +1,1 @@
+Agente de teste que executa a skill diagnosticar-sandbox e mostra a versão do Python, o sistema operacional, os arquivos da skill e os pacotes disponíveis no ambiente de scripts das skills.
