@@ -1,0 +1,6 @@
+# LF everywhere by default.
+* text=auto eol=lf
+# Copilot agent files are used on Windows: CRLF in the working tree.
+"Copilot 365/**" text=auto eol=crlf
+# Skill packages run in Microsoft's script sandbox: LF.
+"Copilot 365/**/skills/**" text=auto eol=lf
