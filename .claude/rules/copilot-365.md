@@ -5,7 +5,7 @@ paths:
 
 # Copilot 365
 
-Agents built in Microsoft 365 Copilot Agent Builder. The user creates each agent by hand: pastes name, description and instructions into the Configure tab, and uploads each skill as a `.zip` package.
+Agents built in Microsoft 365 Copilot Agent Builder. The user creates each agent by hand: pastes name, description and instructions into the Configure tab, and uploads each skill as a `.zip` package. Microsoft now calls the product Microsoft Copilot Chat; its docs use both names.
 
 ## Layout
 
@@ -25,6 +25,16 @@ The user's tenant has Microsoft 365 Copilot Chat without a Copilot license and w
 - Available to agents: custom instructions, web search, scoped web search, code interpreter (toggle "Create documents, charts, and code"), image generator (toggle "Create images").
 - Unavailable: SharePoint, OneDrive, embedded files, Copilot connectors, Dataverse, email, people, Teams messages and meetings. Instructions rely on the available list only; naming an unavailable source makes the agent claim access it lacks.
 - Skills appear in Agent Builder since 2026-10-01, although Microsoft lists a Copilot license or pay-as-you-go, plus the Frontier Program, as prerequisites. Unresolved: when an upload or run fails, suspect licensing first.
+
+## Web search
+
+Read 2026-10-01 from [Add knowledge in Agent Builder](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge), [Knowledge sources](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/knowledge-sources) and [Web search data and privacy](https://learn.microsoft.com/en-us/microsoft-365/copilot/manage-public-web-access):
+
+- The "Search all websites" toggle (Knowledge section) lets the agent use any web data. Scoped search takes up to four public URLs, at most two path levels deep, without query parameters.
+- Agents ground on Bing's index rather than live pages; content that loads dynamically can be missing or stale.
+- Copilot sends Bing a query of a few words derived from the prompt; the whole prompt goes only when it is very short.
+- "Only use specified sources" makes the agent prefer the configured sources for lookups and answer with a fallback message when they hold nothing; general knowledge still answers simple questions. Agent Builder can't block general knowledge.
+- When an admin disables web search, agents with it enabled report no error and answer without the web.
 
 ## Agent fields
 
