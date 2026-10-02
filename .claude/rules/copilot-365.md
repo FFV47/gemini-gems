@@ -36,6 +36,14 @@ Read 2026-10-01 from [Add knowledge in Agent Builder](https://learn.microsoft.co
 - "Only use specified sources" makes the agent prefer the configured sources for lookups and answer with a fallback message when they hold nothing; general knowledge still answers simple questions. Agent Builder can't block general knowledge.
 - When an admin disables web search, agents with it enabled report no error and answer without the web.
 
+## Code interpreter
+
+Read 2026-10-01 from [Code interpreter](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/code-interpreter) and [Build agents](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents):
+
+- The sources disagree on the switch. Code interpreter says the capability is always enabled in Agent Builder; Build agents describes the toggle "Create documents, charts, and code". The user saw the toggle in Agent Builder on 2026-10-01.
+- Files it generates stay available for download only during the active session.
+- Users can upload Word, Excel, PowerPoint, PDF, CSV/TSV and TXT/UTF8 files for analysis.
+
 ## Agent fields
 
 Read 2026-10-01 from [Build agents](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents):
