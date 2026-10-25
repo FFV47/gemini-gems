@@ -71,6 +71,9 @@
     "failIfUnavailable": true,
     "allowUnsandboxedCommands": false,
     "excludedCommands": ["git push *", "gh *"],
+    "filesystem": {
+      "denyRead": ["~/**/.env"]
+    },
     "credentials": {
       "files": [
         {
