@@ -80,7 +80,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 - Before using a version-dependent feature, check the installed version (lockfile, manifest, `--version`).
 - When stating what code does, cite file and line. Don't describe a file from its name or extension: read it. If you only read part of it, say which part.
 - In responses to me, mark the source of each claim that supports a conclusion:
-  `[Executed]` (command output from this session), `[Read]` (file, with path and line),
+  `[Read]` (file, with path and line),
   `[Web]` (page consulted in this session, with link), `[Training]` (model memory,
   may be outdated), or `[Inferred]` (your conclusion from the ones above).
   Without a link, the label is `[Training]`, never `[Web]`. Don't use labels in commits, code, or files.

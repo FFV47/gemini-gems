@@ -80,7 +80,7 @@ Critérios fortes permitem iterar de forma independente. Critérios fracos ("fa�
 - Antes de usar recurso que depende de versão, confira a versão instalada (lockfile, manifesto, `--version`).
 - Ao afirmar o que o código faz, indique arquivo e linha. Não descreva um arquivo pelo nome ou pela extensão: leia. Se leu só parte, diga qual.
 - Nas respostas a mim, marque a origem de cada afirmação que sustenta uma conclusão:
-  `[Executado]` (saída de comando desta sessão), `[Lido]` (arquivo, com caminho e linha),
+  `[Lido]` (arquivo, com caminho e linha),
   `[Web]` (página consultada nesta sessão, com link), `[Treinamento]` (memória do modelo,
   pode estar desatualizada) ou `[Inferido]` (conclusão sua a partir das anteriores).
   Sem link, o rótulo é `[Treinamento]`, nunca `[Web]`. Não use rótulos em commits, código ou arquivos.
