@@ -23,3 +23,7 @@ A folder's rules file loads when you read a file in that folder. Before creating
 ## Platform facts
 
 The rules files record limits and capabilities with the source URL and the date read. Platforms change them without notice, and several features are in preview. Re-open the source before a limit decides something, and whenever a draft comes within 5% of a limit. When a fact changes, update the rules file and its date in the same edit.
+
+## deprecated agents
+
+Deprecated agents and skills remain in the repository for reference. They must be moved to the `depreciados` folder for each specific platform. They may be un-deprecated if the user desires, but they are not maintained and may not work with current platform versions. Whenever the user asks to un-deprecate an agent or skill, you must check the platform's current capabilities and documentation and update the instructions accordingly.

@@ -11,12 +11,12 @@ Agents built in Microsoft 365 Copilot Agent Builder. The user creates each agent
 
 ```text
 Copilot 365/<Agent>/
-  <Agent>.md, <Agent> V2.md, ...   instructions (versions: root CLAUDE.md)
-  <Agent> - Descrição.txt          description: one file, edited in place
-  skills/<skill-name>/             SKILL.md, scripts/, resource files
+  INSTRUCOES.md, INSTRUCOES V2.md, ...   instructions (versions: root CLAUDE.md)
+  DESCRICAO.txt          description: one file, edited in place
+  skills/<skill-name>/   SKILL.md, DESCRICAO.txt, scripts/, resource files
 ```
 
-`<Agent>` is the agent's exact name in Agent Builder. `Teste de Skills/` is a test agent (see Diagnostic).
+`<Agent>` is the agent's exact name in Agent Builder.
 
 ## Plan
 
