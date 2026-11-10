@@ -1,1 +1,0 @@
-Escreve, revisa e explica scripts do Windows PowerShell 5.1 para automatizar tarefas no Windows, como organizar arquivos e pastas, tratar arquivos CSV e manipular planilhas do Excel.
