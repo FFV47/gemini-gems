@@ -12,8 +12,7 @@ Agents built in Microsoft 365 Copilot Agent Builder. The user creates each agent
 ```text
 Copilot 365/<Agent>/
   INSTRUCOES.md, INSTRUCOES V2.md, ...   instructions (versions: root CLAUDE.md)
-  DESCRICAO.txt          description: one file, edited in place
-  skills/<skill-name>/   SKILL.md, DESCRICAO.txt, scripts/, resource files
+  <skill-name>/   SKILL.md, scripts/, resource files
 ```
 
 `<Agent>` is the agent's exact name in Agent Builder.
@@ -24,7 +23,7 @@ The user's tenant has Microsoft 365 Copilot Chat without a Copilot license and w
 
 - Available to agents: custom instructions, web search, scoped web search, code interpreter (toggle "Create documents, charts, and code"), image generator (toggle "Create images").
 - Unavailable: SharePoint, OneDrive, embedded files, Copilot connectors, Dataverse, email, people, Teams messages and meetings. Instructions rely on the available list only; naming an unavailable source makes the agent claim access it lacks.
-- Skills appear in Agent Builder since 2026-10-01, although Microsoft lists a Copilot license or pay-as-you-go, plus the Frontier Program, as prerequisites. Unresolved: when an upload or run fails, suspect licensing first.
+- Skills appear in Agent Builder since 2026-10-01, although [Add skills in Agent Builder](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-skills) lists a Copilot license or pay-as-you-go as the prerequisite (read 2026-11-10; neither that page nor prerequisites mentions the Frontier Program any more). Unresolved: when an upload or run fails, suspect licensing first.
 
 ## Web search
 
@@ -50,10 +49,11 @@ Read 2026-10-01 from [Build agents](https://learn.microsoft.com/en-us/microsoft-
 
 - Name: 30 characters. Description: 1,000. Instructions: 8,000.
 - The description helps the model pick the agent and is shown to users.
-- Microsoft does not document whether a line break counts as 1 or 2 characters, and agent files here use CRLF. A draft fits only when both counts fit:
+- `INSTRUCOES.md` opens with YAML front matter holding `name` and `description`. The user pastes those into the Name and Description fields and pastes only the body into Instructions, so the 8,000 limit applies to the body.
+- Microsoft does not document whether a line break counts as 1 or 2 characters, and agent files here use CRLF. A draft fits only when both counts fit. The command drops the front matter and counts the body:
 
   ```bash
-  python3 -c 'import sys; t = open(sys.argv[1], encoding="utf-8", newline="").read().replace("\r\n", "\n"); print("LF:", len(t), "CRLF:", len(t) + t.count("\n"))' "<file>"
+  python3 -c 'import re, sys; t = open(sys.argv[1], encoding="utf-8", newline="").read().replace("\r\n", "\n"); t = re.sub(r"\A---\n.*?\n---\n+", "", t, flags=re.S); print("LF:", len(t), "CRLF:", len(t) + t.count("\n"))' "<file>"
   ```
 
 ## Writing instructions
@@ -78,25 +78,19 @@ Conventions:
 
 - Folder name equals `name`: lowercase, hyphens, starting with a verb (`formatar-changelog`).
 - `description`: third person; what the skill does, then "Use quando…" with concrete situations; up to 1,024 characters (Gemini's limit; Microsoft documents none).
-- Scripts use only the Python standard library until the diagnostic lists the sandbox packages. Run each script locally with `python3` before packaging.
-- Package with `SKILL.md` at the archive root, as Microsoft documents (untested, see Diagnostic):
+- Body: the sections Agent Builder generates, in this order: `## Purpose`, `## Uses`, `## Instructions` (numbered steps), `## Parameters`. Headings in English, content in Portuguese. `Uses` names the agent capabilities the skill needs, as in `- Agent capabilities: codeInterpreter`. Source: `Doc VBA/doc-vba/SKILL.md`, which the user generated in Agent Builder (reported 2026-11-10). Microsoft documents only the front matter, and `codeInterpreter` is the only capability identifier seen so far: use no other until a generated skill shows it.
+- Package with `SKILL.md` at the archive root, as Microsoft documents:
 
   ```bash
-  python3 -c 'import os, shutil, sys; d = sys.argv[1].rstrip("/"); print(shutil.make_archive("dist/" + os.path.basename(d), "zip", root_dir=d))' "Copilot 365/<Agent>/skills/<skill-name>"
+  python3 -c 'import os, shutil, sys; d = sys.argv[1].rstrip("/"); print(shutil.make_archive("dist/" + os.path.basename(d), "zip", root_dir=d))' "Copilot 365/<Agent>/<skill-name>"
   ```
 
 ## Line endings
 
-`.gitattributes` gives agent files (instructions, descriptions) CRLF in the working tree and everything under `skills/` LF. Git converts only on checkout, so a file you create keeps the endings you wrote. Convert each new agent file:
+`.gitattributes` gives every file under `Copilot 365/` (instructions, `SKILL.md`, resource files) CRLF in the working tree and everything under a skill's `scripts/` LF, because scripts run in a Linux sandbox. Git converts only on checkout, so a file you create keeps the endings you wrote. Convert each new instructions file and `SKILL.md`:
 
 ```bash
 python3 -c 'import pathlib, sys; p = pathlib.Path(sys.argv[1]); p.write_bytes(p.read_bytes().replace(b"\r\n", b"\n").replace(b"\n", b"\r\n"))' "<file>"
 ```
 
-Check with `git ls-files --eol -- "Copilot 365"`: agent files show `w/crlf`, skill files `w/lf`.
-
-## Diagnostic
-
-`Teste de Skills/skills/diagnosticar-sandbox/` prints the sandbox's Python version, OS, extracted skill files and installed packages. The user uploads `dist/diagnosticar-sandbox.zip` (`SKILL.md` at the root) and, if that fails, `dist/diagnosticar-sandbox-com-pasta.zip` (skill folder inside). Build the second with `root_dir` set to the skill's parent folder and `base_dir` to the skill's name.
-
-Results: not tested yet. When the user reports them, record here with the date: which layout uploaded, Python version, OS, packages that matter, and whether the script ran. Then update the packaging and script rules above.
+Check with `git ls-files --eol -- "Copilot 365"`: instructions and `SKILL.md` show `w/crlf`, scripts `w/lf`.
