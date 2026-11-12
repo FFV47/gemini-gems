@@ -76,14 +76,9 @@ Read 2026-10-01 from [Add skills in Agent Builder](https://learn.microsoft.com/e
 
 Conventions:
 
-- Folder name equals `name`: lowercase, hyphens, starting with a verb (`formatar-changelog`).
+- Folder name equals `name`: lowercase, hyphens.
 - `description`: third person; what the skill does, then "Use quando…" with concrete situations; up to 1,024 characters (Gemini's limit; Microsoft documents none).
-- Body: the sections Agent Builder generates, in this order: `## Purpose`, `## Uses`, `## Instructions` (numbered steps), `## Parameters`. Headings in English, content in Portuguese. `Uses` names the agent capabilities the skill needs, as in `- Agent capabilities: codeInterpreter`. Source: `Doc VBA/doc-vba/SKILL.md`, which the user generated in Agent Builder (reported 2026-11-10). Microsoft documents only the front matter, and `codeInterpreter` is the only capability identifier seen so far: use no other until a generated skill shows it.
-- Package with `SKILL.md` at the archive root, as Microsoft documents:
-
-  ```bash
-  python3 -c 'import os, shutil, sys; d = sys.argv[1].rstrip("/"); print(shutil.make_archive("dist/" + os.path.basename(d), "zip", root_dir=d))' "Copilot 365/<Agent>/<skill-name>"
-  ```
+- Body: the sections Agent Builder generates, in this order: `## Purpose`, `## Uses`, `## Instructions` (numbered steps), `## Parameters`, `## Output`. Headings in English, content in Portuguese. `Uses` names the agent capabilities the skill needs, as in `- Agent capabilities: codeInterpreter`. Source: `Doc VBA/doc-vba/SKILL.md`, which the user generated in Agent Builder (reported 2026-11-10). Microsoft documents only the front matter, and `codeInterpreter` is the only capability identifier seen so far: use no other until a generated skill shows it.
 
 ## Line endings
 
