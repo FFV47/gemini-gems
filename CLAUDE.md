@@ -11,10 +11,12 @@ This repository stores instructions for AI agents on four platforms. The user pu
 
 A folder's rules file loads when you read a file in that folder. Before creating a file in a folder you have not read from, read its rules file.
 
+`System prompts/` holds research notes on the system prompts of ChatGPT, claude.ai and Gemini, kept as reference for writing agent content. It has no rules file, and nothing in it is published.
+
 ## Conventions
 
 - Language: agent content in Brazilian Portuguese. `CLAUDE.md` and `.claude/rules/` in English. Commit messages in English, imperative mood.
-- Versions: `<Name>.md` is V1; later versions sit beside it as `<Name> V2.md`, `<Name> V3.md`. The highest number is the published version: edit that file, and create the next number. Skills are the exception: one folder per skill, edited in place, history in git.
+- Versions: `<Name>.md` is V1; later versions sit beside it as `<Name> V2.md`, `<Name> V3.md`. The highest number is the published version. To change it, create the next number as a copy of it and edit the copy; later edits in the same task go to that copy. Skills are the exception: one folder per skill, edited in place, history in git.
 - `CLAUDE.md` and `CLAUDE.local.md` as exact file names belong to this root only: Claude Code loads any file with those names as instructions for this repository. Templates carry a qualifier, as in `CLAUDE EN-US.md`.
 - Models: name the family (Opus), never a version number. Versions change faster than these files.
 - The repository is public on GitHub: keep employer names, tenant details and credentials out of every file.

@@ -64,13 +64,7 @@ Transforme tarefas em objetivos verificáveis:
 - "Corrija o bug" → "Escreva um teste que reproduza o bug e faça-o passar"
 - "Refatore X" → "Garanta que os testes passam antes e depois"
 
-Em tarefas de vários passos, exponha um plano curto antes de executar:
-
-```
-1. [Passo] → verificar: [checagem]
-2. [Passo] → verificar: [checagem]
-3. [Passo] → verificar: [checagem]
-```
+Em tarefas de vários passos, nomeie a checagem que mostra que cada passo funcionou e execute-a antes de seguir.
 
 Critérios fortes permitem iterar de forma independente. Critérios fracos ("faça funcionar") exigem esclarecimento constante.
 
@@ -129,9 +123,9 @@ Diante de um obstáculo, não use ação destrutiva como atalho: não pule verif
 - Uma ideia por frase. Se o leitor precisa reler para entender, divida.
 - Prefira voz ativa e nomeie quem age: "o compilador valida as consultas", não "as consultas são validadas".
 - Prefira a palavra simples: "usar" em vez de "utilizar" ou "alavancar", "ajudar" em vez de "facilitar", "para" em vez de "a fim de".
-- Corte enchimento e vocabulário típico de IA. Em português: "vale ressaltar que", "é importante notar que", "cabe destacar", "desempenha um papel crucial", "robusto", "mergulhar fundo". Em inglês: "delve", "crucial", "leverage", "showcase", "it's worth noting".
+- Faça cada frase carregar uma afirmação, em português e em inglês: onde caberia uma expressão pronta ou um intensificador, ponha o fato específico ou corte a frase.
 - Corte advérbios que escoram um verbo fraco. Use o verbo certo ou o número medido.
 - Sem ressalvas empilhadas: "poderia potencialmente talvez" vira "pode". Ressalvas sobre incerteza real (seção 5) continuam obrigatórias.
 - Sem atribuições vagas ("especialistas afirmam", "estudos mostram"): cite a fonte ou corte a afirmação.
-- Sem paralelismos negativos ("não é só X, é Y") nem grupos de três forçados. Use o número natural de itens.
+- Afirme cada ponto diretamente e liste tantos itens quantos existirem.
 - Use sempre o mesmo termo para a mesma coisa. Não alterne sinônimos.

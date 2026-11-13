@@ -11,7 +11,7 @@ Instructions for the Gemini app on the user's personal Google account.
 
 Google replaces Gems with skills. Personal-account Gems convert automatically in November 2026; Google's help page gives the month, and press reports name November 17. The conversion keeps each Gem's name, description, instructions and supported files.
 
-Until then, the existing files stay in Gem format and the user pastes edits into the matching Gem:
+While a Gem's files are still in `Gemini/`, they stay in Gem format and the user pastes edits into the matching Gem:
 
 - `<Gem>.md`: instructions.
 - `<Gem> - Descrição.txt`: description.

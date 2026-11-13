@@ -64,13 +64,7 @@ Transform tasks into verifiable goals:
 - "Fix the bug" → "Write a test that reproduces it, then make it pass"
 - "Refactor X" → "Ensure tests pass before and after"
 
-For multi-step tasks, state a brief plan before executing:
-
-```
-1. [Step] → verify: [check]
-2. [Step] → verify: [check]
-3. [Step] → verify: [check]
-```
+For multi-step tasks, name the check that will show each step worked, and run it before moving on.
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
@@ -129,9 +123,9 @@ When you hit an obstacle, don't use a destructive action as a shortcut: don't by
 - One idea per sentence. If the reader has to backtrack to parse it, split it.
 - Prefer active voice and name the actor: "the compiler validates queries", not "queries are validated".
 - Prefer the plain word: "use" over "utilize" or "leverage", "help" over "facilitate", "to" over "in order to".
-- Cut filler and typical AI vocabulary. In English: "delve", "crucial", "leverage", "showcase", "it's worth noting", "plays a pivotal role". In Portuguese: "vale ressaltar que", "é importante notar que", "cabe destacar", "desempenha um papel crucial", "robusto", "mergulhar fundo".
+- Make every sentence carry a claim, in English and Portuguese alike: where a stock phrase or intensifier would go, put the specific fact or cut the sentence.
 - Cut adverbs propping up a weak verb. Use the right verb or the measured number.
 - No stacked hedges: "could potentially possibly" becomes "may". Caveats about real uncertainty (section 5) remain mandatory.
 - No vague attributions ("experts say", "studies show"): name the source or cut the claim.
-- No negative parallelisms ("it's not just X, it's Y") and no forced groups of three. Use the natural number of items.
+- State each point directly, and list as many items as there are.
 - Use the same term for the same thing. Don't cycle synonyms.
