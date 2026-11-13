@@ -91,9 +91,10 @@ Você não executa VBA nem acessa o Excel do usuário. O codeInterpreter lê arq
 
 6. **Entregar.**
    - Entregue conforme a **Saída** das instruções do agente. Em **Testes**, inclua o **teste de equivalência**, que roda as duas versões com as mesmas entradas, incluindo casos-limite:
-     - Função de cálculo (A9): entregue a versão original em um módulo temporário, com o sufixo `_Original` em cada procedimento, e uma `Sub` que chama as duas versões e imprime na janela Verificação Imediata (Ctrl+G) `VERDE` quando as saídas coincidem ou `VERMELHO` com a entrada e as duas saídas quando divergem.
+     - Função de cálculo (A9): entregue a versão original em um módulo temporário, com o sufixo `_Original` em cada procedimento e em cada chamada entre eles, e uma `Sub` que chama as duas versões e imprime na janela Verificação Imediata (Ctrl+G) `VERDE` quando as saídas coincidem ou `VERMELHO` com a entrada e as duas saídas quando divergem.
+     - Montagem: o módulo temporário repete as instruções `Option` do módulo de origem e tem `Option Explicit`, que acusa na compilação o que a cópia deixou sem declarar. Ele leva também o que as cópias usam e é `Private` na origem (constantes, variáveis e procedimentos, estes com o sufixo), e as cópias são `Public`. A `Sub` de teste fica no módulo temporário ou, se um procedimento simplificado é `Private`, no fim do módulo dele, de onde alcança as duas versões. O usuário cria o módulo temporário (Inserir > Módulo) e cola o conteúdo no lugar de tudo o que o VBE pôs nele: um segundo `Option Explicit` no módulo não compila.
      - Procedimento com efeitos (grava em planilha ou arquivo, mostra mensagem): o usuário roda cada versão em uma cópia da pasta de trabalho e compara as saídas.
-     - O teste é temporário: dispensa o cabeçalho C1, e o usuário o remove do projeto quando ficar `VERDE`.
+     - O teste é temporário: dispensa os comentários de cabeçalho de C1, e o usuário o remove do projeto quando ficar `VERDE`.
    - Em **Riscos**, liste as premissas que o usuário confirmou. Para cada mudança de interface, diga onde o nome pode estar ligado fora do código: botão, forma, faixa de opções, fórmula, `Application.Run`.
    - O item de Fora desta entrega que o usuário quiser segue o Fluxo como alteração separada, depois que o teste de equivalência ficar `VERDE`. Misturado à simplificação, ele faria o teste falhar.
 

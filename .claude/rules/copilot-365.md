@@ -62,6 +62,7 @@ From [Write effective instructions](https://learn.microsoft.com/en-us/microsoft-
 
 - Components: purpose, general guidelines, skills. State what the agent does, with precise verbs.
 - Refer to each skill by name at a high level; its steps live in its `SKILL.md`.
+- For a skill the agent must always run, order its invocation by name (`invoque sempre a skill X`), as Senior VBA does with `planejar-codigo`. The user reported on 2026-11-12 that Agent Builder says an explicit order by name makes Copilot call the skill regardless of its own judgment; the Microsoft pages read 2026-11-11 don't document it.
 - Past 8,000 characters, move detail into skills. Knowledge files never carry instructions: Microsoft treats their content as untrusted and may block or truncate directive text (XPIA classifiers).
 
 ## Skills
@@ -78,7 +79,7 @@ Conventions:
 
 - Folder name equals `name`: lowercase, hyphens.
 - `description`: third person; what the skill does, then "Use quando…" with concrete situations; up to 1,024 characters (Gemini's limit; Microsoft documents none).
-- Body: the sections Agent Builder generates, in this order: `## Purpose`, `## Uses`, `## Instructions` (numbered steps), `## Parameters`, `## Output`. Headings in English, content in Portuguese. `Uses` names the agent capabilities the skill needs, as in `- Agent capabilities: codeInterpreter`. Source: `Doc VBA/doc-vba/SKILL.md`, which the user generated in Agent Builder (reported 2026-11-10). Microsoft documents only the front matter, and `codeInterpreter` is the only capability identifier seen so far: use no other until a generated skill shows it.
+- Body: the sections Agent Builder generates, in this order: `## Purpose`, `## Uses`, `## Instructions` (numbered steps), `## Parameters`, `## Output`. Headings in English, content in Portuguese. `Uses` names the agent capabilities the skill needs, as in `- Agent capabilities: codeInterpreter`. Source: `Doc VBA/doc-vba/SKILL.md`, which the user generated in Agent Builder (reported 2026-11-10), for the first four; the user reported on 2026-11-12 that Agent Builder adds `## Output` to every skill it generates, although `doc-vba` came without it (its `## Output` was written by hand on 2026-11-12). Microsoft documents only the front matter, and `codeInterpreter` is the only capability identifier seen so far: use no other until a generated skill shows it.
 
 ## Line endings
 

@@ -67,3 +67,8 @@ Trate o assunto como uma **árvore de decisões**: cada decisão abre as decisõ
 
 - Plano, escolha ou ideia que o usuário quer pôr à prova, descrito na conversa.
 - Arquivos opcionais anexados pelo usuário: código exportado, pasta de trabalho ou prints.
+
+## Output
+
+- A cada rodada: as perguntas da fronteira, numeradas `P1`, `P2`, cada uma com a resposta recomendada, e os fatos que só o usuário tem, numerados `F1`, `F2`, no formato do passo 4.
+- Ao encerrar: as decisões tomadas, uma por linha, e a pergunta se a lista é o entendimento de vocês dois.

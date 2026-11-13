@@ -64,3 +64,8 @@ Analisar um projeto VBA a partir do código e de materiais visuais opcionais, co
 
 - Código completo do projeto VBA, preferencialmente em `.txt`.
 - Prints opcionais de formulários, abas, botões e mensagens.
+
+## Output
+
+- Etapa 1: resumo da ferramenta, as tabelas e os fluxos de chamada do passo 4 e as perguntas pendentes, seguidos do pedido de confirmação ao autor.
+- Etapa 2: link para download do `.docx` com as partes `Manual do usuário` e `Guia técnico de manutenção`.
